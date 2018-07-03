@@ -25,13 +25,6 @@ security:
 
 spring:
   data:
-    mongodb.host: localhost
-    mongodb.port: 27017
-    mongodb.uri: mongodb://localhost/delivery
-    mongo.repositories.enabled: true
-
-spring:
-  data:
     mongodb:
       uri: mongodb://localhost/delivery
       host: localhost
