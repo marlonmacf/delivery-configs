@@ -19,14 +19,18 @@ spring:
       database: delivery
       host: localhost
       port: 27017
+  freemarker:
+    cache: false
+    suffix: .html
+    templateEncoding: UTF-8
 
 oauth:
   auth:
-    url: http://localhost:8081/oauth/authorize?client_id=web-client&response_type=code
+    url: http://localhost:9092/oauth/authorize?client_id=delivery-auth-server&response_type=code
   token:
     expire: 7200
-    url: http://localhost:8081/oauth/token?grant_type=authorization_code&code=%s
+    url: http://localhost:9092/oauth/token?grant_type=authorization_code&code=%s
     refresh:
-      url: http://localhost:8081/oauth/token?grant_type=refresh_token&refresh_token=%s
+      url: http://localhost:9092/oauth/token?grant_type=refresh_token&refresh_token=%s
   id:
     secret: d2ViLWNsaWVudDp3ZWItY2xpZW50LXNlY3JldA==
