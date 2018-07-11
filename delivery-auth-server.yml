@@ -19,3 +19,14 @@ spring:
       database: delivery
       host: localhost
       port: 27017
+
+oauth:
+  auth:
+    url: http://localhost:8081/oauth/authorize?client_id=web-client&response_type=code
+  token:
+    expire: 7200
+    url: http://localhost:8081/oauth/token?grant_type=authorization_code&code=%s
+    refresh:
+      url: http://localhost:8081/oauth/token?grant_type=refresh_token&refresh_token=%s
+  id:
+    secret: d2ViLWNsaWVudDp3ZWItY2xpZW50LXNlY3JldA==
