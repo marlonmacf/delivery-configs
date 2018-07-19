@@ -16,6 +16,6 @@ eureka:
 spring:
   data:
     mongodb:
-      database: delivery
+      database: ms-basics
       host: localhost
       port: 27017

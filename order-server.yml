@@ -15,3 +15,10 @@ eureka:
 
 authserver:
   server: localhost:9092
+
+spring:
+  data:
+    mongodb:
+      database: ms-basics
+      host: localhost
+      port: 27017
