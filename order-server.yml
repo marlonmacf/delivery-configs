@@ -26,7 +26,7 @@ spring:
 
 oauth:
   auth:
-    url: http://localhost:9092/oauth/authorize?client_id=web-client&response_type=code
+    url: http://localhost:9092/oauth/authorize?client_id=order-server&response_type=code
   token:
     url: http://localhost:9092/oauth/token?grant_type=authorization_code&code=%s
     refresh:
