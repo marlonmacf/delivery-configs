@@ -19,3 +19,18 @@ spring:
       database: ms-basics
       host: localhost
       port: 27017
+  freemarker:
+    cache: false
+    suffix: .html
+    templateEncoding: UTF-8
+
+oauth:
+  auth:
+    url: http://localhost:9092/oauth/authorize?client_id=web-client&response_type=code
+  token:
+    url: http://localhost:9092/oauth/token?grant_type=authorization_code&code=%s
+    refresh:
+      url: http://localhost:9092/oauth/token?grant_type=refresh_token&refresh_token=%s
+    expire: 7200
+  id:
+    secret: d2ViLWNsaWVudDp3ZWItY2xpZW50LXNlY3JldA==
